@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course home page WDD231">
+    <meta name="author" content="Germán Vargas">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Course Home Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/profile.jpg" alt="Profile picture" class="profile-img">
+            <h1>Germán Vargas</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <button id="menu-toggle" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+            <ul id="nav-menu" class="hidden">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">GitHub Profile</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Course Work -->
+        <section>
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+        <!-- City -->
+        <section>
+            <h2>Mendoza, Argentina</h2>
+            <img src="images/mendoza.jpg" alt="Mendoza">
+            <p>View of the Andes mountains in Mendoza, Argentina.</p>
+        </section>
+
+        <!-- Web and Computer Programming Certificate -->
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="course-buttons">
+                <button>All</button>
+                <button>CSE</button>
+                <button>WDD</button>
+            </div>
+            <div id="course-list">
+            </div>
+            <p id="total-credits">Total Credits: <span>0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 <span id="currentyear"></span> Germán Vargas, Argentina</p>
+        <p id="lastModified">Last Update: </p>
+    </footer>
+
+    <script src="scripts/script.js" defer></script>
+
+</body>
+
+</html>
