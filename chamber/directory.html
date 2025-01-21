@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of Businesses in Mendoza Chamber of Commerce">
+    <meta name="author" content="Germán Vargas">
+
+    <title>Mendoza Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- OG -->
+    <meta property="og:title" content="Mendoza Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="https:">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Mendoza Chamber Logo" width="100" height="50">
+        </div>
+
+        <!-- Hamburguer Button -->
+        <button id="hamburger" class="hamburger-button" aria-label="Open Menu">☰</button>
+
+        <nav id="mobileMenu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <h1>Business Directory</h1>
+
+        <div class="menu">
+            <button id="grid" class="toggle-button">⏹️ Grid View</button>
+            <button id="list" class="toggle-button">📄 List View</button>
+        </div>
+
+        <div id="directory" class="grid">
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us: mendoza@chamber.org | Phone: +54 261-555-1234</p>
+        <p>&copy; <span id="year"></span> Mendoza Chamber of Commerce. All rights reserved.</p>
+        <p>WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script defer src="scripts/script.js"></script>
+</body>
+
+</html>

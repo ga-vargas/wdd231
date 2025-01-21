@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Palmares Open Mall",
+        "address": "San Martin Sur 2875, Godoy Cruz",
+        "phone": "+54 0261 348 1200",
+        "website": "https://palmares.com.ar",
+        "image": "images/palmares.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Diplomatic Hotel",
+        "address": "Av. Belgrano 1041, Mendoza",
+        "phone": "+54 0261 405-1900",
+        "website": "https://www.diplomatichotel.com.ar",
+        "image": "images/diplomatic-hotel.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Don Mario Restaurant",
+        "address": "Paul Harris and Turin, Godoy Cruz",
+        "phone": "+54 0261 439 4838",
+        "website": "https://donmario.com.ar",
+        "image": "images/don-mario.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Chocolezza",
+        "address": "Av. Las Heras 435, Mendoza",
+        "phone": "+54 0261 4850 612",
+        "website": "https://www.chocolezza.com.ar/",
+        "image": "images/chocolezza.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Entre Dos",
+        "address": "San Lorenzo 555, Mendoza",
+        "phone": "+54 0261 15593 2230",
+        "website": "https://www.entredosalfajorespremium.online",
+        "image": "images/entre-dos.jpg",
+        "membershipLevel": 1
+    },
+    {
+        "name": "LaMadrid Wines",
+        "address": "Roque Saenz Peña 8450, Luján de Cuyo",
+        "phone": "+54 0261 476 2165",
+        "website": "https://www.lamadridwines.com",
+        "image": "images/lamadrid-wines.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Zuelo's Olive Oil",
+        "address": "RP 33 Km 7.5, Maipú",
+        "phone": "555-4040",
+        "website": "https://zuelo.com.ar",
+        "image": "images/zuelo.jpg",
+        "membershipLevel": 1
+    }
+]
