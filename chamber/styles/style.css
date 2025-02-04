@@ -101,7 +101,7 @@ footer p {
 
 .home-page .cta-button {
     padding: 12px 24px;
-    background-color: #ff6600;
+    background-color: #c34e00;
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -110,7 +110,7 @@ footer p {
 }
 
 .home-page .cta-button:hover {
-    background-color: #cc5500;
+    background-color: #cc5500; 
 }
 
 .home-page h1 {
