@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Mendoza Chamber of Commerce - Home Page">
+    <meta name="author" content="Germán Vargas">
+
+    <title>Home | Mendoza Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- OG Tags -->
+    <meta property="og:title" content="Mendoza Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="og:url" content="http://127.0.0.1:5500/chamber/index.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="home-page">
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Mendoza Chamber Logo" width="100" height="50">
+        </div>
+
+        <!-- Hamburger Button -->
+        <button id="hamburger" class="hamburger-button" aria-label="Open Menu">&#9776;</button>
+
+        <nav id="mobileMenu" class="mobile-menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Home Title -->
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="Hero Image">
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="call-to-action">
+            <div class="cta-container">
+                <a href="join.html" class="cta-button">Join Us Today</a>
+            </div>
+        </section>
+
+        <h1>Home</h1>
+
+        <!-- Events Section -->
+        <!-- 3 Columns Container-->
+        <div class="weather-container">
+            <section class="events">
+                <h2>Events</h2>
+                <div class="event-list">
+                    <p>No events available at the moment. Stay tuned!</p>
+                </div>
+            </section>
+
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="weather-details">
+                    <p><strong>Temperature:</strong> <span id="current-temp">24.5°C</span></p>
+                    <p><strong>Condition:</strong> <span id="current-condition">Clear sky</span></p>
+                    <p><strong>Humidity:</strong> <span id="humidity">25%</span></p>
+                    <p><strong>Wind Speed:</strong> <span id="wind-speed">25.9 km/h</span></p>
+                    <p><strong>Sunrise:</strong> <span id="sunrise">7:30 AM</span></p>
+                    <p><strong>Sunset:</strong> <span id="sunset">9:59 PM</span></p>
+                </div>
+            </section>
+
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+                <ul id="forecast-list">
+                    <li>Loading forecast...</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Spotlight Section -->
+        <section class="spotlight">
+            <div class="spotlight-cards">
+                <p>Loading member spotlights...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us: mendoza@chamber.org | Phone: +54 261-555-1234</p>
+        <p>&copy; <span id="year"></span> Mendoza Chamber of Commerce. All rights reserved.</p>
+        <p>WDD 231 | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script defer src="scripts/script.js"></script>
+
+</body>
+
+</html>
