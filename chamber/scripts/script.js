@@ -123,21 +123,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const forecastList = document.getElementById("forecast-list");
             forecastList.innerHTML = "";
 
-
+            
             const dailyForecasts = {};
             data.list.forEach(item => {
-                const date = item.dt_txt.split(" ")[0];
+                const date = item.dt_txt.split(" ")[0]; 
                 if (!dailyForecasts[date]) {
-                    dailyForecasts[date] = item;
+                    dailyForecasts[date] = item; 
                 }
             });
 
-            const dates = Object.keys(dailyForecasts).slice(0, 3);
+            const dates = Object.keys(dailyForecasts).slice(0, 3); 
             dates.forEach((date, index) => {
                 const item = dailyForecasts[date];
                 const temp = Math.round(item.main.temp);
 
-                let dayLabel = index === 0 ? "Today" : getDayOfWeek(date);
+                let dayLabel = index === 0 ? "Today" : getDayOfWeek(date); 
 
                 const li = document.createElement("li");
                 li.textContent = `${dayLabel}: ${temp}°C`;
@@ -148,12 +148,63 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error fetching forecast data:", error);
         }
     }
+
+    async function fetchSpotlights() {
+        try {
+            const response = await fetch(membersUrl);
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+            const members = await response.json();
+
+            const eligibleMembers = members.filter(member => member.membershipLevel === 2 || member.membershipLevel === 3);
+
+            const selectedMembers = [];
+            while (selectedMembers.length < 3 && eligibleMembers.length > 0) {
+                const randomIndex = Math.floor(Math.random() * eligibleMembers.length);
+                selectedMembers.push(eligibleMembers.splice(randomIndex, 1)[0]);
+            }
+
+            const spotlightContainer = document.querySelector(".spotlight-cards");
+            spotlightContainer.innerHTML = "";
+
+            selectedMembers.forEach(member => {
+                const card = document.createElement("div");
+                card.classList.add("spotlight-card");
+
+                card.innerHTML = `
+                    <img src="${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+                    <p><strong>Membership Level:</strong> ${member.membershipLevel === 2 ? "Gold" : "Silver"}</p>
+                `;
+
+                spotlightContainer.appendChild(card);
+            });
+
+        } catch (error) {
+            console.error("Error fetching spotlight members:", error);
+        }
+    }
+
+    function getDayOfWeek(dateString) {
+        const date = new Date(dateString);
+        if (isNaN(date)) {
+            console.error("Fecha inválida:", dateString);
+            return "Unknown";
+        }
+        return date.toLocaleDateString('en-US', { weekday: 'long' });
+    }
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     fetchWeather();
     fetchForecast();
     fetchSpotlights();
 });
-
-// members script
 
 document.addEventListener("DOMContentLoaded", () => {
     const membersUrl = "data/members.json";
